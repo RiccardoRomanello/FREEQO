@@ -25,7 +25,7 @@ class Multigraph {
         size_t Indegree(const NodeLabel u) const { return in_degree[u]; }
         size_t Outdegree(const NodeLabel u) const { return out_degree[u]; }
         size_t Balance(const NodeLabel u) const { return Outdegree(u) - Indegree(u); }
-        size_t Multiplicity(const Edge & uv) const { return multiplicity.contains(uv) ? multiplicity.at(uv) : 0 }
+        size_t Multiplicity(const Edge & uv) const { return multiplicity.contains(uv) ? multiplicity.at(uv) : 0; }
 
         size_t NodesCount() const { return nodesCount; }
         size_t EdgesCount() const { return edgesCount; }
