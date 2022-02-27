@@ -9,7 +9,7 @@
 
 
 void Multigraph::AddEdge(NodeLabel source, NodeLabel target) {
-    assert(source < nodesCount and target < nodesCount);
+    assert(source < (NodeLabel) nodesCount and target < (NodeLabel) nodesCount);
     
     if(Multiplicity({source, target}) == 0)
         adjacency[source].emplace_back(target);
@@ -26,7 +26,7 @@ std::map<Multigraph::Edge, size_t> Multigraph::Balance() {
     std::queue<NodeLabel> B_plus, B_minus;
 
     // Retrieve surplus and deficient nodes
-    for(NodeLabel u=0; u<NodesCount(); ++u) {
+    for(NodeLabel u=0; u<(NodeLabel) NodesCount(); ++u) {
         if(Balance(u) > 0)
             B_plus.emplace(u);
         else if(Balance(u) < 0)
