@@ -10,6 +10,8 @@
 //nodes are supposed to be just integers
 
 class Multigraph {
+    public:
+    
     using NodeLabel = int;
     using AdjList = std::vector<std::vector<NodeLabel>>;
     struct Edge {
