@@ -62,7 +62,7 @@ int main(){
     }
 
     cerr << "Balancing...";
-    auto e_bot = g.Balance();
+    auto e_bot = g.Eulerify();
 
     cerr << "done!\n";
     cerr << "Added:\n";
