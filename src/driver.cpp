@@ -37,7 +37,8 @@ using namespace std;
 // }
 
 int main(){
-    Multigraph g(3);
+    const int N = 3;
+    Multigraph g(N);
 
     g.AddEdge(0, 1);
     g.AddEdge(1, 2);
@@ -55,11 +56,17 @@ int main(){
 
 
 
+    cerr << "Balance of each node:\n";
+    for(Multigraph::NodeLabel u=0; u<N; ++u) {
+        cerr << "Balance(" << u << ") = " << g.Balance(u) << "\n";
+    }
+
+    cerr << "Balancing...";
     auto e_bot = g.Balance();
 
-    cerr << "It is balanced!\n";
+    cerr << "done!\n";
     cerr << "Added:\n";
     for(const auto & [key, val] : e_bot) {
         cerr << val << " copies of (" << key.source << ", " << key.target << ")\n";
-    }    
+    }
 }
