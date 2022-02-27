@@ -14,6 +14,11 @@ class Multigraph {
     using AdjList = std::vector<std::vector<NodeLabel>>;
     struct Edge {
         NodeLabel source, target;
+        bool operator<(const Edge & other) const {
+            return source != other.source ? 
+                        source < other.source :
+                        target < other.target;
+        };
     };
 
 
@@ -24,7 +29,7 @@ class Multigraph {
 
         size_t Indegree(const NodeLabel u) const { return in_degree[u]; }
         size_t Outdegree(const NodeLabel u) const { return out_degree[u]; }
-        size_t Balance(const NodeLabel u) const { return Outdegree(u) - Indegree(u); }
+        int    Balance(const NodeLabel u) const { return (int) Outdegree(u) - Indegree(u); }
         size_t Multiplicity(const Edge & uv) const { return multiplicity.contains(uv) ? multiplicity.at(uv) : 0; }
 
         size_t NodesCount() const { return nodesCount; }
@@ -32,7 +37,7 @@ class Multigraph {
 
 
 
-        std::map<Edge, size_t> Balance() {}
+        std::map<Edge, size_t> Balance();
 
 
 
