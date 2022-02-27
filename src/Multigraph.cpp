@@ -7,6 +7,8 @@
 #include <cmath>
 #include <queue>
 
+namespace farquaad {
+
 
 void Multigraph::AddEdge(NodeLabel source, NodeLabel target) {
     assert(source < (NodeLabel) nodesCount and target < (NodeLabel) nodesCount);
@@ -62,7 +64,7 @@ std::map<Multigraph::Edge, size_t> Multigraph::Eulerify() {
 }
 
 
-
+} // farquaad
 
 
 

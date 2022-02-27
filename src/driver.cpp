@@ -4,6 +4,7 @@
 #include "Multigraph.hh"
 
 using namespace std;
+using namespace farquaad;
 
 // void printAsMatrix(vector<vector<complex<double> > > M){
 //     cout << "[";

@@ -9,6 +9,8 @@
 
 //nodes are supposed to be just integers
 
+namespace farquaad {
+
 class Multigraph {
     public:
 
@@ -56,3 +58,5 @@ class Multigraph {
         std::vector<size_t> in_degree;                  // in_degree of a node
         std::vector<size_t> out_degree;                 // out_degree of a node
 };
+
+} // farquaad
