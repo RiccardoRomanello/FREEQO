@@ -1,2 +1,2 @@
 # FARQUAAD
-FAilure-Resistant QUAntum grAph encoDing
+FAilure-Resilient QUAntum grAph encoDing
