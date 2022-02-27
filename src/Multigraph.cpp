@@ -22,7 +22,7 @@ void Multigraph::AddEdge(NodeLabel source, NodeLabel target) {
 
 
 
-std::map<Multigraph::Edge, size_t> Multigraph::Balance() {
+std::map<Multigraph::Edge, size_t> Multigraph::Eulerify() {
     std::queue<NodeLabel> B_plus, B_minus;
 
     // Retrieve surplus and deficient nodes

@@ -11,7 +11,7 @@
 
 class Multigraph {
     public:
-    
+
     using NodeLabel = int;
     using AdjList = std::vector<std::vector<NodeLabel>>;
     struct Edge {
@@ -39,7 +39,7 @@ class Multigraph {
 
 
 
-        std::map<Edge, size_t> Balance();
+        std::map<Edge, size_t> Eulerify();
 
 
 
