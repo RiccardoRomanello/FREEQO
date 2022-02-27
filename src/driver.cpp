@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <assert.h>
 #include "Multigraph.hh"
 
 using namespace std;
@@ -39,15 +40,15 @@ int main(){
     Multigraph g(5);
     
     // C4 
-    g.addEdge(0, 0);
-    g.addEdge(0, 1);
-    g.addEdge(1, 1);
-    g.addEdge(1, 2);
-    g.addEdge(2, 2);
-    g.addEdge(2, 3);
-    g.addEdge(3, 3);
-    g.addEdge(3, 0);
-    
-    
-    printAsMatrix(g.getLineGraph());
+    g.AddEdge(0, 0);
+    g.AddEdge(0, 1);
+    g.AddEdge(1, 1);
+    g.AddEdge(1, 2);
+    g.AddEdge(2, 2);
+    g.AddEdge(2, 3);
+    g.AddEdge(3, 3);
+    g.AddEdge(3, 0);
+
+
+    assert(g.Balance().empty());
 }
