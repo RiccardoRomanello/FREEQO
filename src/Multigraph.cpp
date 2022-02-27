@@ -39,6 +39,8 @@ std::map<Multigraph::Edge, size_t> Multigraph::Eulerify() {
         auto u = B_minus.front();
         B_minus.pop();
 
+        assert(not B_plus.empty());
+
         auto v = B_plus.front();
         assert(Balance(v) > 0);
 
