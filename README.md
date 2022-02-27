@@ -1,2 +1,2 @@
 # FARQUAAD
-Unitarize code for Reversible Computation
+FAilure-Resistant QUAntum grAph encoDing
