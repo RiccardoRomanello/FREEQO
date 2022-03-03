@@ -1,5 +1,22 @@
-from Edge import Edge
 import numpy as np
+
+class Edge:
+    def __init__(self, source, target):
+        self.source = source
+        self.target = target
+
+    def __hash__(self):
+        return hash((self.source, self.target))
+    
+    def __eq__(self, other):
+        return (self.source, self.target) == (other.source, other.target)
+
+    def __str__(self):
+        return "(" + str(self.source) + ", " + str(self.target) + ")"
+    
+    def __repr__(self):
+        return "(" + str(self.source) + ", " + str(self.target) + ")"
+
 
 class Multigraph: 
 
@@ -65,6 +82,16 @@ class Multigraph:
             res += [(e, k) for k in range(self.edge_multiplicity(e))]
         return res
 
+    def ingoing_edges(self, u):
+        res = []
+
+        for v, adj_v in self.adj_list.items():
+            if u in adj_v:
+                e = Edge(v, u)
+                res += [(e, k) for k in range(self.edge_multiplicity(e))]
+
+        return res
+
     def all_edges(self):
         res = []
         for u in self.adj_list.keys():
@@ -105,3 +132,6 @@ class Multigraph:
                 line.add_edge(i, k)
 
         return line
+
+    def nodes(self):
+        return self.adj_list.keys()
