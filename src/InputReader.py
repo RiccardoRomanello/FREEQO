@@ -38,7 +38,7 @@ class InputReader:
             rows_number = int(input_file.readline())
             driver = Driver(g, mathcal_U)
 
-            # set of matrices_count rows where there is [nodes]: matrix (matrix described by rows in classical numpy sintax)
+            # set of rows_number rows where there is [nodes]: matrix (matrix described by rows in classical matlab sintax)
             # for each node in nodes the matrix associated is matrix
 
             for _ in range(rows_number):
