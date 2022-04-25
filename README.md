@@ -1,2 +1,2 @@
-# FARQUAAD
-FAilure-Resilient QUAntum grAph encoDing
+# FREEQO
+Failure-Resilient Eulerian graph Encoding (for) Quantum tOurs
