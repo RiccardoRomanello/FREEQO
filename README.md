@@ -28,7 +28,7 @@ For example, to get the input from `"different_input.txt"`, the line of code sho
 In order for the input to be parsed, it must be written using a specific form. 
 + The first line must contain the number of nodes inside the graph. We will denote such value with *n*
 + After that, *n* different lines will have to be present with the following syntax: 
-  `u : u<sub>1</sub>, u<sub>2</sub>, ..., u<sub>1</sub>`
+  <code> u : u<sub>1</sub>, u<sub>2</sub>, ..., u<sub>1</sub> </code>
 which has to be interpreted as follows: _u_ is connected with an edge to _u_<sub>1</sub>, _u_<sub>2</sub>, ..., _u_<sub>k</sub>  
 Notice that each one of the _n_ different lines should refer to a different node (no controls have been implemented to check repeated nodes in the input reading) 
 Moreover, there is no particular rule for the node naming convention. Just make sure to use the same names in the matrix definition phase.
