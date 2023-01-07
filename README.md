@@ -29,12 +29,12 @@ In order for the input to be parsed, it must be written using a specific form.
 + The first line must contain the number of nodes inside the graph. We will denote such value with *n*
 + After that, *n* different lines will have to be present with the following syntax: 
   `u : u_1, u_2, ..., u_k`
-which has to be interpreted as follows: _u_1, u_2, ..., u_k_ are all and only set of adjacent nodes of _u_. 
+which has to be interpreted as follows: edges (u, u<sub>1</sub>) _u_1, u_2, ..., u_k_ are all and only set of adjacent nodes of _u_. 
 Notice that each one of the _n_ different lines should refer to a different node (no controls have been implemented to check repeated nodes in the input reading) 
 
 + Then a natural number _R_ is expected
 + _R_ lines will be read, all with the following form: 
- `[list of comma separated nodes] : unitary matrix *M* in matlab syntax`
+ `[list of comma separated nodes] : unitary matrix M in matlab syntax`
  which has to be interpreted as follows: for all the nodes present the list, the unitary matrix to be applied during the unitarize procedure is *M*.
  This syntax is due to the fact that each node in the inital graph _G_, induces a specific submatrix inside the adjacency matrix of _G_'s line graph. In the unitarize procedure we substitute each one of this submatrix with a unitary matrix. Hence, per each node, we must know which unitary to use. 
  In the case some nodes have no unitary defined, the matrix representing the Discrete Fourier Transform ([DFT](https://en.wikipedia.org/wiki/DFT_matrix)) will be used as replacement. 
