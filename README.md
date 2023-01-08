@@ -3,7 +3,7 @@ Failure-Resilient Eulerian graph Encoding (for) Quantum tOurs.
 
 ## Motivations
 
-The reason behind this tool is to implement the algorithm we introduced in the paper _Directed Graph Encoding in Quantum Computing Supporting Edge-Failure_, available [here](https://link.springer.com/chapter/10.1007/978-3-031-09005-9_6).
+The reason behind this tool is to implement the algorithm we introduced in the paper _Directed Graph Encoding in Quantum Computing Supporting Edge-Failure_, available [here](https://link.springer.com/chapter/10.1007/978-3-031-09005-9_6) or inside this repository.
 
 In particular, the main procedure takes as input a multigraph _G_ and a family of unitary matrices _U_ and produces a unitary matrix encoding _G_.
 
