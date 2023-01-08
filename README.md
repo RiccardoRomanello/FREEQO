@@ -27,23 +27,25 @@ For example, to get the input from `"different_input.txt"`, the line of code sho
 
 In order for the input to be parsed, it must be written using a specific form. 
 + The first line must contain the number of nodes inside the graph. We will denote such value with *n*
-+ After that, *n* different lines will have to be present with the following syntax: 
-  <code> u : u<sub>1</sub>, u<sub>2</sub>, ..., u<sub>k</sub> </code>
-which has to be interpreted as follows: there is an edge going from _u_ to _u_<sub>1</sub>, from _u_ and _u_<sub>2</sub> and so on. 
++ The following *n* lines have the following syntax: 
+  <code> u : u<sub>1</sub>, u<sub>2</sub>, ..., u<sub>k</sub> </code> <br/>
+where _u_ is a node name and u<sub>1</sub>, u<sub>2</sub>, ..., u<sub>k</sub> are _u_'s neighbours in the multigraph.
 In order to obtain a multigraph, for example _G_ where there are two edges between _u_ and _v_, just write _u_ : _v_, _v_.
-Notice that each one of the _n_ different lines should refer to a different node (no controls have been implemented to check repeated nodes in the input reading) 
+Notice that each one of the _n_ different lines should refer to a different node (no controls have been implemented to check repeated nodes in the input reading). <br/> 
 Moreover, there is no particular rule for the node naming convention. Just make sure to use the same names in the matrix definition phase.
 
 + Then a natural number _R_ is expected
-+ _R_ lines will be read, all with the following form: 
- `[list of comma separated nodes] : unitary matrix M in matlab syntax`
- which has to be interpreted as follows: for all the nodes present the list, the unitary matrix to be applied during the unitarize procedure is *M*.
++ The following _R_ lines must have the following form: 
+ `[list of comma separated nodes] : M` <br/>
+ which has to be interpreted as follows: for all the nodes in the list, the unitary matrix to be applied during the unitarize procedure is *M*.
  This syntax is due to the fact that each node in the inital graph _G_, induces a specific submatrix inside the adjacency matrix of _G_'s line graph. In the unitarize procedure we substitute each one of this submatrix with a unitary matrix. Hence, per each node, we must know which unitary to use. 
  In the case some nodes have no unitary defined, the matrix representing the Discrete Fourier Transform ([DFT](https://en.wikipedia.org/wiki/DFT_matrix)) will be used as replacement. 
  As a special case, if _R_ is zero, all submatrices will be susbtituted with the DFT.
- The syntax for the matrix *M* is the following: write each row of the matrix separating the elements with a space. Then each row is separated by next one with a semicolon. Moreover, when using complex numbers, rember that in python the imaginary unit is written as _j_ and not _i_.
+ The syntax for the matrix *M* is the following: write each row of the matrix separating the elements with a space. Then each row is separated from the next one with a semicolon. Moreover, when using complex numbers, rember that in python the imaginary unit is written as _j_ and not _i_.
  For example, the matrix for the *Y* gate is: 
  `0 -1j; j 0`
+ 
+ However, the file `src/input.txt` provides an example of well formatted input. 
  
  ## Output
  
