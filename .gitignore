@@ -2,3 +2,4 @@
 **/bin/*
 
 !**.gitkeep
+__pycache__/
