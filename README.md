@@ -51,3 +51,7 @@ Moreover, there is no particular rule for the node naming convention. Just make 
  
  The program will output some informative lines to tell the keep the user updated on the algorithm stages. 
  Once the procedure is completed, the unitary matrix obtained is printed. The standard output channel is the console, so no automatica redirection to output file is done. 
+ 
+ ## iFREEQO
+ 
+ We also developed a web-based interactive version of FREEQO. Check it out [here](http://encase.uniud.it:3002/#/). 
